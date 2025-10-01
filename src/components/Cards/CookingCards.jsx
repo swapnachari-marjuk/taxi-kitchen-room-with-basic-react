@@ -1,6 +1,6 @@
 import React from "react";
 
-const CookingCards = ({ order }) => {
+const CookingCards = ({ order, handleCooked }) => {
   return (
     <div
       className="rounded-xl p-5 shadow hover:shadow-lg"
@@ -24,7 +24,10 @@ const CookingCards = ({ order }) => {
       </p>
 
       {/* Static Button */}
-      <button className="px-6 mt-3 py-1 shadow text-sm hover:bg-black hover:text-white bg-white cursor-pointer rounded-xl">
+      <button
+        onClick={() => handleCooked(order)}
+        className="px-6 mt-3 py-1 shadow text-sm hover:bg-black hover:text-white bg-white cursor-pointer rounded-xl"
+      >
         Cooked?
       </button>
     </div>
